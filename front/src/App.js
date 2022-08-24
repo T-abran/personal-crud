@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="register-container">
-        <h1>Scrim Shop</h1>
+        <h1 className='register-title'>Scrim Shop</h1>
         <input
           type="text"
           name="name"
@@ -24,6 +24,7 @@ function App() {
           className="register-input"
           placeholder="Category"
         />
+        <button className="register-button">Register</button>
       </div>
     </div>
   );
