@@ -27,14 +27,12 @@ Esse projeto consiste em um crud sobre uma loja de jogos com front e back integr
  - Inicia o projeto:
     - ``` npm run dev ```
     
-    
-    - Tecnologia e Ferramentas:
+ ## Tecnologia e Ferramentas:
    - Html
    - Css
    - React
    - NodeJs
    - Express
-   - Jest
    - Eslint
    - javascript
    - Mysql
