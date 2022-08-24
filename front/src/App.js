@@ -5,7 +5,9 @@ import Card from './components/card';
 
 function App() {
   const [values, setValues] = useState();
+  const [listGames, setListGames] = useState([]);
 
+  console.log(listGames);
   const handleChangeValues = ({ target }) => {
     const { name, value } = target;
     setValues((prevValue) => ({
@@ -26,7 +28,7 @@ function App() {
 
   useEffect(() => {
 Axios.get('http://localhost:3001/getCards').then((response) => {
-  console.log(response);
+  setListGames(response.data)
 })
   },[])
   return (
@@ -62,7 +64,10 @@ Axios.get('http://localhost:3001/getCards').then((response) => {
           Register
         </button>
       </div>
-      <Card />
+      {listGames.map((item)=> (
+       <Card />
+      ))}
+      
     </div>
   );
 }
