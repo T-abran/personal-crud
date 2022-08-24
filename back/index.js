@@ -17,6 +17,15 @@ app.use(express.json());
 
 const PORT = 3001;
 
+app.get('/getCards', (_req, res) => {
+  let query = `SELECT * FROM Games`;
+  db.query(query,(err, result) =>{
+    if (err) {
+      console.log(err);
+    }else res.json(result)
+  } )
+})
+
 app.post('/register', (req, _res) => {
   const { name, cost, category } = req.body;
   console.log(name);
