@@ -14,7 +14,7 @@ function App() {
   };
 
   const handleClickButton = () => {
-    Axios.post('http//localhost:3001/register', {
+    Axios.post('http://localhost:3001/register', {
       name: values.name,
       cost: values.cost,
       category: values.category,

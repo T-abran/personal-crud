@@ -16,11 +16,10 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = 3001;
-app.get('/', (req, res) => {
-  const query = "INSERT INTO Games ( name, cost, category ) VALUES ('mk', 13, 'luta')";
-  db.query(query, (error, result) => {
-    console.log(error);
-  });
+
+app.post('/register', (req, res) => {
+  const { name, cost, category } = req.body;
+  console.log(name);
 });
 
 app.listen(PORT, () => console.log(`rodando na porta: ${PORT}`));
