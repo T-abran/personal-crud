@@ -17,9 +17,13 @@ app.use(express.json());
 
 const PORT = 3001;
 
-app.post('/register', (req, res) => {
+app.post('/register', (req, _res) => {
   const { name, cost, category } = req.body;
   console.log(name);
+  let query = `INSERT INTO Games (name, cost, category ) VALUES (?, ?, ?)`;
+  db.query(query, [name, cost, category], (err, result) => {
+    console.log(err);
+  })
 });
 
 app.listen(PORT, () => console.log(`rodando na porta: ${PORT}`));
