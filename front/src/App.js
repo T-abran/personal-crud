@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Axios from 'axios';
+import Card from './components/card';
 
 function App() {
   const [values, setValues] = useState();
@@ -22,6 +23,8 @@ function App() {
       console.log(response);
     });
   };
+
+  
   return (
     <div className="app-container">
       <div className="register-container">
@@ -55,6 +58,7 @@ function App() {
           Register
         </button>
       </div>
+      <Card />
     </div>
   );
 }
