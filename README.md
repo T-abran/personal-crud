@@ -16,13 +16,14 @@ Esse projeto consiste em um crud sobre uma loja de jogos com front e back integr
  - Primeiro clone o repositório:
     - ``` git clone git@github.com:T-abran/personal-crud.git ```
  - Entre no repositório: 
-    - ``` cd personal-crud ```
+   - ``` cd personal-crud ```
     
-  - Entre na pasta front:
+ - Entre na pasta front:
    - ``` cd front ```
  - Inicia o projeto:
     - ``` npm start ```
-  - Entre na pasta back:
+  
+ - Entre na pasta back:
    - ``` cd back ```
  - Inicia o projeto:
     - ``` npm run dev ```
