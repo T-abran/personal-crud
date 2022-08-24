@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [values, setValues] = useState('');
-  console.log(values);
+  const [values, setValues] = useState();
 
   const handleChangeValues = ({ target }) => {
     const { name, value } = target;
@@ -11,6 +10,10 @@ function App() {
       ...prevValue,
       [name]: value,
     }));
+  };
+
+  const handleClickButton = () => {
+    console.log(values);
   };
   return (
     <div className="app-container">
@@ -37,7 +40,13 @@ function App() {
           className="register-input"
           placeholder="Category"
         />
-        <button className="register-button">Register</button>
+        <button
+          type="button"
+          onClick={() => handleClickButton()}
+          className="register-button"
+        >
+          Register
+        </button>
       </div>
     </div>
   );
