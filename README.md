@@ -1,8 +1,5 @@
 <h1 align="center"> Star Game </h1>
 
-<h4 align="center"> 
-    :construction:  Projeto em construção  :construction:
-</h4>
 
 Esse projeto consiste em um crud sobre uma loja de jogos com front e back integrados.
 
@@ -37,6 +34,7 @@ Esse projeto consiste em um crud sobre uma loja de jogos com front e back integr
    - Eslint
    - javascript
    - Mysql
+   - Material UI
    
      <h3 align="left"> Foto do Projeto </h3>
  <img src="./src/images/" alt="foto do projeto" />
