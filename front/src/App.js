@@ -15,26 +15,34 @@ function App() {
       [name]: value,
     }));
   };
-
+  useEffect(() => {
+    Axios.get('http://localhost:3001/getCards').then((response) => {
+        setListGames(response.data)
+    })
+}, [listGames])
   const handleClickButton = () => {
     Axios.post('http://localhost:3001/register', {
       name: values.name,
       cost: values.cost,
       category: values.category,
-    }).then((response) => {
-      console.log(response);
+    }).then(() => {
+     setListGames([...listGames, {
+      name: values.name,
+      cost: values.cost,
+      category: values.category,
+     }])
     });
   };
 
   useEffect(() => {
-Axios.get('http://localhost:3001/getCards').then((response) => {
-  setListGames(response.data)
-})
-  },[])
+    Axios.get('http://localhost:3001/getCards').then((response) => {
+      setListGames(response.data);
+    });
+  }, []);
   return (
     <div className="app-container">
       <div className="register-container">
-        <h1 className="register-title">Scrim Shop</h1>
+        <h1 className="register-title">Star Game</h1>
         <input
           onChange={handleChangeValues}
           type="text"
@@ -44,7 +52,7 @@ Axios.get('http://localhost:3001/getCards').then((response) => {
         />
         <input
           onChange={handleChangeValues}
-          type="text"
+          type="number"
           name="cost"
           className="register-input"
           placeholder="Cost"
@@ -64,10 +72,17 @@ Axios.get('http://localhost:3001/getCards').then((response) => {
           Register
         </button>
       </div>
-      {listGames.map((item)=> (
-       <Card />
+      {listGames.map((item) => (
+        <Card
+          key={item.id}
+          listGames={listGames}
+          setListGames={setListGames}
+          id={item.id}
+          name={item.name}
+          cost={item.cost}
+          category={item.category}
+        />
       ))}
-      
     </div>
   );
 }
