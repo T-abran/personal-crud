@@ -19,6 +19,7 @@
         "react-hooks"
     ],
     "rules": {
+      "react/prop-types": [0, { "skipUndeclared": false }],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "no-console": "off",
       "no-restricted-syntax": [
