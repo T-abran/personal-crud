@@ -4,11 +4,19 @@ import React, { useState } from 'react'
 import './card.css'
 import FormDialog from '../dialog/dialog';
 
-function Card({name, cost,category,setListCard, listCard,id}) {
+function Card({name, cost, category, setListCard, listCard,id}) {
   const [open, setOpen] = useState(false);
   return ( 
     <>
-    <FormDialog open={open} setOpen={setOpen} name={name} cost={cost} category={category} listCard={listCard} id={id} setListCard={setListCard} />
+    <FormDialog
+        open={open} 
+        setOpen={setOpen}
+        name={name} 
+        cost={cost}
+        category={category}
+        listCard={listCard} 
+        id={id} 
+        setListCard={setListCard} />
   
   <div className='card-container' onClick={() => setOpen(true)}>
 <h1 className='card-title'> {name}</h1>
