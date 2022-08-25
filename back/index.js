@@ -29,7 +29,7 @@ app.get('/getCards', (_req, res) => {
 app.post('/register', (req, res) => {
   const { name, cost, category } = req.body;
   let query = `INSERT INTO Games (name, cost, category ) VALUES (?, ?, ?)`;
- 
+
   db.query(query, [name, cost, category], (err, result) => {
     if (err) {
       console.log(err);
@@ -47,9 +47,9 @@ app.put('/edit', (req, res) => {
   });
 });
 
-app.delete("/delete/:id", (req, res) => {
+app.delete('/delete/:id', (req, res) => {
   const { id } = req.params;
-  let query = "DELETE FROM Games WHERE id = ?";
+  let query = 'DELETE FROM Games WHERE id = ?';
   db.query(query, id, (err, result) => {
     if (err) {
       console.log(err);

@@ -8,13 +8,11 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Axios from 'axios';
-// import produce from 'immer';
 
 export default function FormDialog(props) {
   const [editValues, setEditValues] = useState({
-    // eslint-disable-next-line react/destructuring-assignment
     id: props.id,
-    name: props.title,
+    name: props.name,
     cost: props.cost,
     category: props.category,
   });
@@ -83,7 +81,7 @@ export default function FormDialog(props) {
             margin="dense"
             id="name"
             label="Nome do jogo"
-            defaultValue={props.title}
+            defaultValue={props.name}
             type="text"
             onChange={handleChangeValues}
             fullWidth
