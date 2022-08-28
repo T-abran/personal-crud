@@ -22,7 +22,7 @@ Esse projeto consiste em um crud sobre uma loja de jogos com front e back integr
 ### Front end
 
   1. `$ cd front`
-  2. `$ npm install` 
+  2. `$ npm install -f` 
   3. `$ npm start`
   
 ### Back end
