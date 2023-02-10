@@ -1,5 +1,5 @@
  
- <h1 align="center"> :star: PersonaL Crud :star: </h1>
+ <h1 align="center"> :star: Personal Crud :star: </h1>
 
 
 Esse projeto consiste em um crud sobre uma loja de jogos com front e back integrados.
