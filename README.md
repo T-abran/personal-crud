@@ -14,7 +14,7 @@ Esse projeto consiste em um crud sobre uma loja de jogos com front e back integr
 
 ## Visualizar:
  - Primeiro clone o repositório:
-    - ``` git clone git@github.com:T-abran/personal-crud.git ```
+    - ``` git@github.com:Tiagoabranges/personal-crud.git ```
  - Entre no repositório: 
    - ``` cd personal-crud ```
 
